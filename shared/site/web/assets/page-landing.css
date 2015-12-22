@@ -1,0 +1,60 @@
+html, body, div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: url(/img/bg-santa.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#epam-logo-bg {
+    background: url(/img/epam-bg.png);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 850px;
+    height: 800px;
+    background-repeat: no-repeat;
+
+    opacity: 0.2;
+}
+
+i.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+i.icon.epam-logo-small {
+    background-image: url(/img/epam-logo-small.png);
+    width: 118px;
+    height: 42px;
+}
+
+.wrapper {
+    /*position: relative;*/
+}
+
+#form-initial {
+    background: red;
+
+    width: 500px;
+    height: 180px;
+    padding: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin: -110px 0 0 -270px;
+
+    background: #FFF;
+    box-shadow: #FFF 0px 0px 4px 5px;
+    border-radius: 5px;
+}
+
+#form-initial .wrap {
+    background: white;
+    /*background: blue;*/
+}

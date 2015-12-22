@@ -1,0 +1,14 @@
+{% extends "layout.html.twig" %}
+
+{% set pageName = 'error' %}
+
+{% block content %}
+    {% spaceless %}
+    <div id="error" class="section">
+      <div class="wrap">
+        <div class="code">{{ code }}</div>
+        <div class="message">{{ message }}</div>
+      </div>
+    </div>
+    {% endspaceless %}
+{% endblock %}

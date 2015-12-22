@@ -1,0 +1,7 @@
+version: '0.1-'
+
+environment: default
+debug: false
+twig.options.cache: false
+
+cache.enabled: true
