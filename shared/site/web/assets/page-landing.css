@@ -54,7 +54,7 @@ body {
 }
 .box-wrap {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
     text-align: center;
 }
 .box-content {
@@ -62,7 +62,6 @@ body {
 }
 
 #secret-santa-title {
-    margin-top: -20px;
     background: url(/img/secret-santa-title.png);
     background-repeat: no-repeat;
     background-size: 650px;
@@ -71,6 +70,8 @@ body {
     height: 160px;
 
     margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
 
 #form-initial {
@@ -115,7 +116,7 @@ body {
     padding: 5px;
     padding-left: 10px;
     font: 15px 'Open Sans';
-    width: 250px;
+    width: 300px;
     border-radius: 6px 0 0 6px;
     border-color: #E8E8E8;
     border-width: 1px;
