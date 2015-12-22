@@ -18,20 +18,9 @@
 
   <link rel="icon" type="image/x-icon" href="/favicon.png" />
 
-  {% if app.debug %}
-    <link rel="stylesheet/less" type="text/css" href="/css/page-{{ pageName }}.less">
-  {% else %}
-    <link rel="stylesheet" type="text/css" href="/assets/page-{{ pageName }}.css?v={{ app.version }}">
-  {% endif %}
+  <link rel="stylesheet" type="text/css" href="/assets/page-{{ pageName }}.css?v={{ app.version }}">
 
-  <link href='http://fonts.googleapis.com/css?family=Exo+2|Open+Sans:300,400,600,700,regular&subset=latin,cyrillic' rel='stylesheet' type='text/css' media='all' />
-
-  {% if app.debug %}
-    <script data-env="development" src="/vendor/less.min.js"></script>
-    <script type="text/javascript">less.watch()</script>
-
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/coffee-script/1.7.1/coffee-script.min.js"></script>
-  {% endif %}
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css' media='all' />
 </head>
 {% endspaceless %}
 <body id="page-{{ pageName }}" class="{{ pageClass|default('') }}">
@@ -41,25 +30,8 @@
     {% block content %}{% endblock %}
   </div>
 
-  {#
   {% spaceless %}
-  <div id="footer" class="section">
-    <div class="wrap">EPAM Secret Santa &copy; 2015</div>
-  </div>
+    <script type="text/javascript" src="/assets/app.js?v={{ app.version }}"></script>
   {% endspaceless %}
-  #}
-
-  {% spaceless %}
-  {{ _self.js('app') }}
-  {{ _self.js('page-'~pageName) }}
-  {% endspaceless %}
-
-  {% macro js(name) %}
-    {% if app.debug %}
-      <script type="text/coffeescript" src="/js/{{ name }}.coffee"></script>
-    {% else %}
-      <script type="text/javascript" src="/assets/{{ name }}.js?v={{ app.version }}"></script>
-    {% endif %}
-  {% endmacro %}
 </body>
 </html>
