@@ -31,7 +31,7 @@ i.icon.christmas-tree {
     bottom: 0px;
 }
 @media screen and (min-width: 1200px) {
-    body {
+    i.icon.christmas-tree {
         background-size: 550px;
         width: 550px;
         height: 615px;
@@ -61,7 +61,7 @@ body {
     background-repeat: no-repeat;
     background-position: right top;
 }
-@media screen and (min-width: 1260px) {
+@media screen and (min-width: 1350px) {
     body {
         background-size: 100%;
     }
