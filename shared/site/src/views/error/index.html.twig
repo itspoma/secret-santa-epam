@@ -1,14 +1,28 @@
 {% extends "layout.html.twig" %}
 
-{% set pageName = 'error' %}
+{% set pageName = 'landing' %}
 
 {% block content %}
-    {% spaceless %}
-    <div id="error" class="section">
-      <div class="wrap">
-        <div class="code">{{ code }}</div>
-        <div class="message">{{ message }}</div>
+  {% spaceless %}
+  <div class="box">
+    <div class="box-wrap">
+      <div class="box-content">
+        <div id="secret-santa-title"></div>
+
+        <div id="form-initial" class="form-initial">
+          <div class="wrap">
+            <div id="introduction-text">
+              {{code}}
+              <br/>
+              <br/>
+              {{message}}
+            </div>
+          </div>
+        </div>
+        <!-- /form -->
+
       </div>
     </div>
-    {% endspaceless %}
+  </div>
+  {% endspaceless %}
 {% endblock %}
