@@ -27,6 +27,8 @@ $app->post('/play', function (Request $request) use ($app) {
 
     $email = $request->get('email');
     
+    sleep(1);
+    
     if (false !== strpos(strtolower(file_get_contents($filename)), strtolower($email))) {
         return 'exists';
     }
@@ -40,8 +42,6 @@ $app->post('/play', function (Request $request) use ($app) {
     $f = fopen($filename, 'aw');
     fwrite($f, join("\t\t", $data)."\n");
     fclose($f);
-
-    sleep(1);
 
     return 'ok';
     return json_encode(array(
