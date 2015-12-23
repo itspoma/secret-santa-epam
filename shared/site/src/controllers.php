@@ -27,7 +27,7 @@ $app->post('/play', function (Request $request) use ($app) {
 
     $email = $request->get('email');
     
-    if (false !== strpos(file_get_contents($filename), $email)) {
+    if (false !== strpos(strtolower(file_get_contents($filename)), strtolower($email))) {
         return 'exists';
     }
 

@@ -155,7 +155,7 @@ body {
     padding: 20px;
 
     background: #FFF;
-    box-shadow: #FFF 0px 0px 4px 5px;
+    // box-shadow: #FFF 0px 0px 4px 5px;
     border-radius: 5px;
 
     text-align: center;
@@ -292,11 +292,13 @@ body {
     vertical-align: top;
 }
 .form-initial label input[type="checkbox"] {
-    margin-top: 6px;
+    margin-top: 3px;
     margin-right: 5px;
 }
 .form-initial label span {
     width: 90%;
+    line-height: 19px;
+    font-size: 14px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
