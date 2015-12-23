@@ -18,7 +18,7 @@ i.icon.epam-logo-small {
     height: 42px;
 }
 i.icon.christmas-tree {
-    background-image: url(http://images.clipartpanda.com/-christmas-tree3.png);
+    background-image: url(/img/christmas-tree.png);
     background-size: 450px;
     width: 450px;
     height: 502px;
@@ -53,6 +53,11 @@ body {
     background: #9C0000 url(/img/bg-santa.png);
     background-repeat: no-repeat;
     background-position: right top;
+}
+@media screen and (max-width: 1300px) {
+    body {
+        background-size: 100%;
+    }
 }
 
 #epam-logo-bg {
@@ -229,4 +234,8 @@ body {
 }
 #form-initial label span {
     width: 90%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
