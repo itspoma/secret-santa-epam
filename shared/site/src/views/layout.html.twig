@@ -20,7 +20,7 @@
 
   <link rel="stylesheet" type="text/css" href="/assets/page-{{ pageName }}.css?v={{ app.version }}">
 
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans|Exo+2|Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css' media='all' />
+  <link href='http://fonts.googleapis.com/css?family=Exo+2|Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css' media='all' />
 </head>
 {% endspaceless %}
 <body id="page-{{ pageName }}" class="{{ pageClass|default('') }}">
@@ -32,7 +32,7 @@
   </div>
 
   {% spaceless %}
-    <script type="text/javascript" src="/assets/app.js?v={{ app.version }}"></script>
+    <script type="text/javascript" src="/assets/page-{{ pageName }}.js?v={{ app.version }}"></script>
   {% endspaceless %}
 </body>
 </html>

@@ -21,6 +21,25 @@ $app->match('/', function () use ($app) {
 })
 ->bind('landing');
 
+// @route
+$app->post('/play', function (Request $request) use ($app) {
+    $data = array(
+        date('Y-m-d H:i:s'),
+        'landing',
+        $request->get('email'),
+    );
+
+    $f = fopen('emails-registered.txt', 'aw');
+    fwrite($f, join("\t\t", $data)."\n");
+    fclose($f);
+
+    sleep(2);
+
+    return json_encode(array(
+        'status' => 'ok',
+    ));
+});
+
 //
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {

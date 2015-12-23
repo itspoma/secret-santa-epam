@@ -153,7 +153,7 @@ body {
     background: red;
 
     width: 600px;
-    height: 380px;
+    min-height: 380px;
     padding: 20px;
 
     background: #FFF;
@@ -165,7 +165,7 @@ body {
 
     margin: 0 auto;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 620px) {
     #form-initial {
         width: 450px;
     }
@@ -206,7 +206,7 @@ body {
 }
 
 #form-initial form input[name="email"],
-#form-initial form div.submit {
+#form-initial form .submit {
     float: left;
     height: 45px;
 }
@@ -221,13 +221,14 @@ body {
     border-width: 1px;
 }
 
-#form-initial form div.submit {
+#form-initial form .submit {
     cursor: pointer;
     background: #eb4e36;
     width: 100px;
     padding-top: 12px;
     color: #FFF;
     font: 17px 'Open Sans';
+    border: none;
     border-radius: 0 6px 6px 0;
 }
 
