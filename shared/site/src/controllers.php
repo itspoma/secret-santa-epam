@@ -25,7 +25,7 @@ $app->match('/', function () use ($app) {
 $app->post('/play', function (Request $request) use ($app) {
     $data = array(
         date('Y-m-d H:i:s'),
-        'landing',
+        $_SERVER['REMOTE_ADDR'],
         $request->get('email'),
     );
 
@@ -33,8 +33,9 @@ $app->post('/play', function (Request $request) use ($app) {
     fwrite($f, join("\t\t", $data)."\n");
     fclose($f);
 
-    sleep(2);
+    sleep(1);
 
+    return 'ok';
     return json_encode(array(
         'status' => 'ok',
     ));
