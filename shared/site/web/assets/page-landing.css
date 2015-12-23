@@ -76,10 +76,19 @@ body {
     top: 30px;
     left: 30px;
 
-    width: 850px;
-    height: 300px;
+    width: 500px;
+    height: 180px;
 
     opacity: 0.15;
+}
+@media screen and (min-width: 1200px) {
+    #epam-logo-bg {
+        background-size: 700px;
+        widows: 710px;
+        height: 210px;
+        top: 60px;
+        left: 110px;
+    }
 }
 @media screen and (max-width: 600px) {
     #epam-logo-bg {
@@ -132,6 +141,11 @@ body {
     margin-top: 40px;
     margin-bottom: 20px;
 }
+@media screen and (min-width: 1200px) {
+    #secret-santa-title {
+        margin-top: 110px;
+    }
+}
 @media screen and (max-width: 700px) {
     #secret-santa-title {
         background-size: 450px;
@@ -178,6 +192,11 @@ body {
     background: white;
     font: 15px 'Exo 2';
     line-height: 21px;
+}
+@media screen and (min-width: 1200px) {
+    #form-initial .wrap {
+        font-size: 16px;
+    }
 }
 
 #form-initial #introduction-text {
