@@ -69,8 +69,13 @@
       return false;
     }
     formEl.classList.add('loading');
-    ajax('/play', 'email=' + email, function(data) {
+    ajax('/play', 'email=' + email, function(response) {
       formEl.classList.remove('loading');
+      if (response === 'exists') {
+        errorEl.innerHTML = 'Цей мейл вже бере участь у грі.';
+        emailEl.focus();
+        return false;
+      }
       formEl.classList.add('hidden');
       return document.getElementById('form-initial-after').classList.remove('hidden');
     });

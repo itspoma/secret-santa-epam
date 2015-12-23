@@ -23,13 +23,21 @@ $app->match('/', function () use ($app) {
 
 // @route
 $app->post('/play', function (Request $request) use ($app) {
+    $filename = 'emails-registered.txt';
+
+    $email = $request->get('email');
+    
+    if (false !== strpos(file_get_contents($filename), $email)) {
+        return 'exists';
+    }
+
     $data = array(
         date('Y-m-d H:i:s'),
         $_SERVER['REMOTE_ADDR'],
-        $request->get('email'),
+        $email,
     );
 
-    $f = fopen('emails-registered.txt', 'aw');
+    $f = fopen($filename, 'aw');
     fwrite($f, join("\t\t", $data)."\n");
     fclose($f);
 
