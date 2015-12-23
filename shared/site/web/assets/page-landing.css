@@ -54,7 +54,7 @@ body {
     background-repeat: no-repeat;
     background-position: right top;
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1260px) {
     body {
         background-size: 100%;
     }
