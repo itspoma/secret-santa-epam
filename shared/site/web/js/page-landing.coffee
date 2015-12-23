@@ -34,6 +34,7 @@ ajax = (url, data, done) ->
 
 window.proceed = ->
     formEl = document.getElementById('form-initial')
+    errorEl = document.getElementById('form-error')
 
     emailEl = document.getElementsByName('email')[0]
     email = emailEl.value
@@ -41,16 +42,21 @@ window.proceed = ->
     isAgreementChecked = document.getElementsByName('agreement')[0].checked
 
     if !isAgreementChecked
-        alert 'Треба прийняти умови, щоб продовжити'
+        errorEl.innerHTML = 'Треба прийняти умови, щоб прийняти участь у грі!'
         return false
 
     if !email.length
-        alert 'Ви забули ввести емейл'
+        errorEl.innerHTML = 'Ви забули ввести емейл!'
         emailEl.focus()
         return false
 
     if !/^.+?@.+?\.\w{2,}$/.test(email)
-        alert 'Введіть коректний емейл'
+        errorEl.innerHTML = 'Введіть коректний емейл!'
+        emailEl.focus()
+        return false
+
+    if !/@epam\.com$/.test(email)
+        errorEl.innerHTML = 'Гра тільки для працівників фірми EPAM!\nВведіть ваш @epam емейл.'
         emailEl.focus()
         return false
 
@@ -61,7 +67,5 @@ window.proceed = ->
 
         formEl.classList.add('hidden')
         document.getElementById('form-initial-after').classList.remove('hidden')
-
-        alert('Ура! Ви зареєстровані!')
 
     false
