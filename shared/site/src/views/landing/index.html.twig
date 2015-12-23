@@ -3,6 +3,7 @@
 {% set pageName = 'landing' %}
 
 {% block content %}
+  {% spaceless %}
   <div class="box">
     <div class="box-wrap">
       <div class="box-content">
@@ -13,17 +14,24 @@
             <i class="icon epam-logo-small"></i>
 
             <div id="introduction-text">
-              Новий рік - це час, коли відбуваються всякі чудові, неочікувані і магічні речі.
-              <br/>
-              <br/>
-              Клуб АДМ - це клуб Анонімних Дідів Морозів, (або Друзів Миколая), який допоможе в чарівний час Нового Року зробити класний, оригінальний і неочікуваий сюрприз зовсім незнайомій людині.
+              Період Нового року - це час, коли відбуваються неочікувані і магічні речі. Коли щиро радієш не так отриманим подарункам, як можливості подарувати комусь трішки новорічного настрою та дива.
 
+              <br/>
+              <br/>
+              Стань персональним <span class="highlight">Secret Santa</span> для когось зі своїх колег з ЕПАМу та подаруй <span class="highlight">30 грудня</span> святковий настрій собі та оточуючим.
             </div>
 
             <form>
               <input type="text" name="email" placeholder="Enter your email" />
               <div class="submit">Join!</div>
             </form>
+
+            <div class="clearfix"></div>
+
+            <label>
+              <input type="checkbox">
+              <span>своєю реєстрацію ти підтверджуєш участь у проекті і стаєш Secret Santa для людини, ім’я якої визначається програмою у вільному порядку.</span>
+            </label>
           </div>
         </div>
         <!-- /form -->
@@ -31,4 +39,5 @@
       </div>
     </div>
   </div>
+  {% endspaceless %}
 {% endblock %}
