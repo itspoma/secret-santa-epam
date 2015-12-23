@@ -214,11 +214,22 @@ body {
     clear: both;
     margin-left: 30px;
 }
+@media screen and (max-width: 650px) {
+    .form-initial form {
+        margin-left: 0px;
+    }
+}
 
-.form-initial form input[name="email"],
+.form-initial form input[type="text"],
 .form-initial form .submit {
     float: left;
     height: 45px;
+}
+@media screen and (max-width: 650px) {
+    .form-initial form input[type="text"],
+    .form-initial form .submit {
+        float: none;
+    }
 }
 
 .form-initial form input[type="text"] {
@@ -229,6 +240,12 @@ body {
     border-radius: 6px 0 0 6px;
     border-color: #E8E8E8;
     border-width: 1px;
+}
+@media screen and (max-width: 650px) {
+    .form-initial form input[type="text"] {
+        width: 100%;
+        border-radius: 6px;
+    }
 }
 
 .form-initial form .submit {
@@ -241,6 +258,13 @@ body {
     border: none;
     border-radius: 0 6px 6px 0;
 }
+@media screen and (max-width: 650px) {
+    .form-initial form .submit {
+        margin-top: 10px;
+        width: 50%;
+        border-radius: 6px;
+    }
+}
 
 .form-initial label {
     display: block;
@@ -248,6 +272,12 @@ body {
     margin-left: 30px;
     text-align: left;
 }
+@media screen and (max-width: 650px) {
+    .form-initial label {
+        margin-left: 0px;
+    }
+}
+
 .form-initial label input[type="checkbox"],
 .form-initial label span {
     display: inline-block;
