@@ -5,3 +5,5 @@ debug: false
 twig.options.cache: false
 
 cache.enabled: true
+
+phase1.end: '2015-12-25 16:00:00'

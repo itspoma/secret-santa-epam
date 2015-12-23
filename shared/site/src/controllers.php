@@ -7,30 +7,17 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 // 
 $app->before(function (Request $request, Application $app) {
-    $url = $request->getUri();
-    // $redirects = $app['redirects.model']->getAll();
-
-    // foreach ($redirects as $redirect) {
-    //     if (strpos($url, $redirect['search']) !== false) {
-    //         return $app->redirect($redirect['redirect_to'], $redirect['code']);
-    //     }
+    // if (time() - strtotime($app['phase1.end']) >= 0) {
+    //     var_dump('phase1 end');
     // }
+
+    // var_dump(date('Y-m-d H:i:s', time()), time() - strtotime($app['phase1.end']));die;
+
 }, Application::EARLY_EVENT);
 
 // @route landing page
 $app->match('/', function () use ($app) {
-    // $page = $app['pages.model']->findBy('page', 'landing');
-
-    $params = array(
-        // 
-    );
-
-    if (isset($_GET['debug']) && $app['debug']) {
-        var_dump($params);
-        die;
-    }
-
-    return $app['twig']->render('landing/index.html.twig', $params);
+    return $app['twig']->render('landing/index.html.twig');
 })
 ->bind('landing');
 

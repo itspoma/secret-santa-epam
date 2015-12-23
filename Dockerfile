@@ -1,11 +1,6 @@
 FROM centos:6
 MAINTAINER itspoma <itspoma@gmail.com>
 
-# ENV home /shared
-
-# WORKDIR ${home}
-# ADD ./shared/site $home
-
 #
 RUN true \
     && yum clean all \
