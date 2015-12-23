@@ -39,20 +39,8 @@ i.icon.christmas-tree {
 }
 @media screen and (max-width: 700px) {
     i.icon.christmas-tree {
-        top: -49px;
-        left: -129px;
-    }
-}
-@media screen and (max-width: 500px) {
-    i.icon.christmas-tree {
-        background-size: 110px;
-        width: 110px;
-        height: 125px;
-
-        left: initial;
-        right: 10px;
-        top: 5px;
-        bottom: initial;
+        top: -10px;
+        left: -225px;
     }
 }
 
