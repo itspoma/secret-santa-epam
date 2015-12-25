@@ -7,10 +7,10 @@
   <div class="box">
     <div class="box-wrap">
       <div class="box-content">
-
         <i class="icon secret-santa-title"></i>
 
-        <div id="form-initial" class="white-box hidden">
+        {% if isOpenRegistration %}
+        <div id="form-initial" class="white-box">
           <i class="icon epam-logo-small"></i>
 
           <div class="section">
@@ -38,7 +38,6 @@
             </div>
           </form>
         </div>
-        <!-- /form -->
 
         <div id="form-initial-after" class="white-box hidden">
           <i class="icon epam-logo-small"></i>
@@ -52,6 +51,8 @@
             </span>
           </div>
         </div>
+
+        {% else %}
 
         <div id="form-initial-close" class="white-box">
           <i class="icon epam-logo-small"></i>
@@ -70,6 +71,7 @@
           </div>
         </div>
 
+        {% endif %}
       </div>
     </div>
   </div>

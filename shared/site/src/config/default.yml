@@ -7,3 +7,10 @@ twig.options.cache: false
 cache.enabled: true
 
 db.filename: false
+
+registration.close.date: '2015-12-25 16:05:00'
+
+mail.host: null
+mail.transport: null
+mail.username: null
+mail.password: null

@@ -28,6 +28,6 @@ window.ajax = (url, data, done) ->
         if xmlhttp.status == 200
             done?(xmlhttp.responseText)
         else
-            handleError(xmlhttp.statusText)
+            handleError?(xmlhttp.statusText)
 
     xmlhttp.send(data)
