@@ -3,3 +3,6 @@
 shared/site/cache
 shared/site/node_modules
 shared/site/vendor
+
+shared/site/src/config/dev.yml
+shared/site/src/config/production.yml

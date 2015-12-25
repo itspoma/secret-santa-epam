@@ -7,46 +7,49 @@
   <div class="box">
     <div class="box-wrap">
       <div class="box-content">
-        <div id="secret-santa-title"></div>
 
-        <div id="form-initial" class="form-initial">
-          <div class="wrap">
-            <i class="icon epam-logo-small"></i>
+        <i class="icon secret-santa-title"></i>
 
-            <div id="introduction-text">
-              Період Нового року - це час, коли відбуваються неочікувані і магічні речі. Коли щиро радієш не так отриманим подарункам, як можливості подарувати комусь трішки новорічного настрою та дива.
+        <div id="form-initial" class="white-box">
+          <i class="icon epam-logo-small"></i>
 
-              <br/>
-              <br/>
-              Стань персональним <span class="highlight">Secret Santa</span> для когось зі своїх колег з ЕПАМу та подаруй <span class="highlight">30 грудня</span> святковий настрій собі та оточуючим.
+          <div class="section">
+            <span>Період Нового року - це час, коли відбуваються неочікувані і магічні речі. Коли щиро радієш не так отриманим подарункам, як можливості подарувати комусь трішки новорічного настрою та дива.</span>
+
+            <br/>
+            <br/>
+            
+            <span>Стань персональним <span class="highlight">Secret Santa</span> для когось зі своїх колег з ЕПАМу та подаруй <span class="highlight">30 грудня</span> святковий настрій собі та оточуючим.</span>
+          </div>
+
+          <div class="section form-errors" id="form-initial-errors"></div>
+
+          <form class="section form" onsubmit="return proceedRegistration()">
+            <div class="form-field inputs">
+              <input type="text" name="email" placeholder="Введіть ваш мейл" />
+              <button type="submit" name="join">Join!</button>
             </div>
 
-            <div id="form-error"></div>
-            <form onsubmit="return proceed()">
-              <input type="text" name="email" placeholder="Введіть ваш мейл" />
-              <button type="submit" class="submit">Join!</button>
-            </form>
-
-            <div class="clearfix"></div>
-
-            <label>
-              <input type="checkbox" name="agreement">
-              <span>Своєю реєстрацію ти підтверджуєш участь у проекті і стаєш Secret Santa для людини, ім’я якої визначається програмою у вільному порядку.</span>
-            </label>
-          </div>
+            <div class="form-field agreement">
+              <label>
+                <input type="checkbox" name="agreement">
+                <span>Своєю реєстрацію ти підтверджуєш участь у проекті і стаєш Secret Santa для людини, ім’я якої визначається програмою у вільному порядку.</span>
+              </label>
+            </div>
+          </form>
         </div>
         <!-- /form -->
 
-        <div id="form-initial-after" class="form-initial hidden">
-          <div class="wrap">
-            <i class="icon epam-logo-small"></i>
-            
-            <div id="introduction-text">
-              Дякуємо за участь!
-              <br/>
-              <br/>
-              <span class="highlight">25 грудня о 16:05</span> тобі буде повідомлено ім’я щасливця,<br/>для якого ти станеш Secret Santa.
-            </div>
+        <div id="form-initial-after" class="white-box hidden">
+          <i class="icon epam-logo-small"></i>
+          
+          <div id="section">
+            <span>Дякуємо за участь!</span>
+            <br/>
+            <br/>
+            <span>
+            <span class="highlight">25 грудня о 16:05</span> тобі буде повідомлено ім’я щасливця,<br/>для якого ти станеш Secret Santa.
+            </span>
           </div>
         </div>
 

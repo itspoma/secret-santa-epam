@@ -2,3 +2,5 @@ environment: dev
 debug: true
 
 cache.enabled: false
+
+db.filename: where-will-be-stored-registered-emails.txt
