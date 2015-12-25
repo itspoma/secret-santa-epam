@@ -18,15 +18,6 @@ $app->match('/', function () use ($app) {
 ->bind('landing');
 
 // @route registration page
-    $database = file_get_contents($app['db.filename']);
-
-        echo sprintf('<b>%s</b> => <b>%s</b><br/>', $emailFrom, $emailTo);
-    }
-
-    die;
-});
-
-// @route registration page
 $app->match('/play', function (Request $request) use ($app) {
     $response = array(
         'ok' => false,

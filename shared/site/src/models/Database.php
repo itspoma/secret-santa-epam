@@ -45,4 +45,15 @@ class Database {
 
         return false;
     }
+
+    /**
+     *
+     * @return array
+     */
+    public function getRecords() {
+        $database = file_get_contents($this->app['db.filename']);
+        $database = split("\n", trim($database));
+
+        return $database;
+    }
 }

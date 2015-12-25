@@ -38,4 +38,13 @@ $app->register(new Silex\Provider\SwiftmailerServiceProvider(), array(
     ),
 ));
 
+$app->register(
+    new Knp\Provider\ConsoleServiceProvider(),
+    array(
+        'console.name' => 'SecretSanta',
+        'console.version' => '0.1.0',
+        'console.project_directory' => __DIR__ . "/.."
+    )
+);
+
 return $app;
