@@ -23,6 +23,16 @@ RUN echo "" >> /etc/php.ini \
 RUN sed 's/#ServerName.*/ServerName demo/' -i /etc/httpd/conf/httpd.conf
 RUN sed 's/#EnableSendfile.*/EnableSendfile off/' -i /etc/httpd/conf/httpd.conf
 
+# nodejs
+RUN true \
+    curl --silent --location https://rpm.nodesource.com/setup | bash - \
+    yum -y install nodejs \
+    yum -y install gcc-c++ make
+
+RUN true \
+    npm -g install npm@latest \
+    npm i -g grunt-cli
+
 # put vhost config for httpd
 ADD ./config/httpd/site.conf /etc/httpd/conf.d/site.conf
 
