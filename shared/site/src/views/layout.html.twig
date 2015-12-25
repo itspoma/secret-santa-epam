@@ -11,20 +11,30 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>{% block title %}{{ title|default('') }}{% endblock %}</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <link rel="icon" type="image/x-icon" href="/favicon.png" />
 
-  <link rel="stylesheet" type="text/css" href="/assets/page-landing.css?v={{ app.version }}">
+  {% if app.debug %}
+    <link rel="stylesheet/less" type="text/css" href="/css/page-{{ pageName }}.less">
+  {% else %}
+    <link rel="stylesheet" type="text/css" href="/assets/page-{{ pageName }}.css?v={{ app.version }}">
+  {% endif %}
 
   <link href='http://fonts.googleapis.com/css?family=Exo+2|Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css' media='all' />
+
+  {% if app.debug %}
+    <script data-env="development" src="/vendor/less.min.js"></script>
+    <script type="text/javascript">less.watch()</script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/coffee-script/1.7.1/coffee-script.min.js"></script>
+  {% endif %}
 </head>
 {% endspaceless %}
-<body id="page-{{ pageName }}" class="{{ pageClass|default('') }}">
-  <div id="epam-logo-bg"></div>
+<body id="page-{{ pageName }}">
+  <i class="icon epam-logo-bg"></i>
   <i class="icon christmas-tree"></i>
 
   <div class="wrapper">
@@ -32,7 +42,16 @@
   </div>
 
   {% spaceless %}
-    <script type="text/javascript" src="/assets/page-{{ pageName }}.js?v={{ app.version }}"></script>
+  {{ _self.js('app') }}
+  {{ _self.js('page-'~pageName) }}
+
+  {% macro js(name) %}
+    {% if app.debug %}
+      <script type="text/coffeescript" src="/js/{{ name }}.coffee"></script>
+    {% else %}
+      <script type="text/javascript" src="/assets/{{ name }}.js?v={{ app.version }}"></script>
+    {% endif %}
+  {% endmacro %}
   {% endspaceless %}
 </body>
 </html>

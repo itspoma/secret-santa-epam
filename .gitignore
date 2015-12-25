@@ -1,4 +1,5 @@
 !.keep
 
 shared/site/cache
-shared/site/vendor/
+shared/site/node_modules
+shared/site/vendor

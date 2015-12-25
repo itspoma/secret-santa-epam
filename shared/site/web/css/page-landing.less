@@ -1,0 +1,126 @@
+@import 'app.less';
+@import 'icons.less';
+
+body {
+    background: #9C0000 url(/img/bg-santa.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    @media screen and (min-width: 1350px) {
+        background-size: 100%;
+    }
+}
+
+.white-box {
+    .section {
+        margin-top: 25px;
+
+        @media screen and (max-width: 480px) {
+            margin-top: 15px;
+        }
+
+        .highlight {
+            color: #20C3D4;
+        }
+
+        &.form-errors {
+            color: #F00;
+            text-align: left;
+            margin-left: 30px;
+            margin-bottom: 5px;
+
+            @media screen and (max-width: 650px) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .form {
+        .clearfix;
+
+        margin-top: 5px;
+        margin-left: 30px;
+
+        @media screen and (max-width: 650px) {
+            margin-left: 0;
+        }
+
+        .form-field {
+            .clearfix;
+
+            &.inputs {
+                input[name="email"],
+                button[name="join"] {
+                    float: left;
+                    height: 45px;
+
+                    @media screen and (max-width: 650px) {
+                        float: none;
+                    }
+                }
+
+                input[name="email"] {
+                    padding: 5px;
+                    height: 34px;
+                    padding-left: 10px;
+                    font: 15px 'Open Sans';
+                    width: 390px;
+                    border-radius: 6px 0 0 6px;
+                    border: 1px solid #E8E8E8;
+
+                    @media screen and (max-width: 650px) {
+                        width: 100%;
+                        border-radius: 6px;
+                    }
+                }
+
+                button[name="join"] {
+                    cursor: pointer;
+                    background: #eb4e36;
+                    width: 100px;
+                    color: #FFF;
+                    font: 17px 'Open Sans';
+                    border: none;
+                    border-radius: 0 6px 6px 0;
+
+                    @media screen and (max-width: 650px) {
+                        margin-top: 10px;
+                        width: 50%;
+                        border-radius: 6px;
+                    }
+                }
+            }
+
+            &.agreement {
+                display: block;
+                margin-top: 8px;
+                text-align: left;
+
+                @media screen and (max-width: 650px) {
+                    margin-left: 0px;
+                }
+
+                input[type="checkbox"],
+                span {
+                    display: inline-block;
+                    vertical-align: top;
+                }
+
+                input[type="checkbox"] {
+                    margin-top: 3px;
+                    margin-right: 5px;
+                }
+
+                span {
+                    width: 90%;
+                    line-height: 19px;
+                    font-size: 14px;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+            }
+        }
+    }
+}
